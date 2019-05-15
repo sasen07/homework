@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--specification of character encoding for html document-->
+	<meta charset="utf-8">
+	<!--setting width to device-width for responsiveness-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tattoos-Tattoos Nepal</title>
+	<!--link for icon-->
+	<link rel="icon" type="image/jpg" href="../Resources/logo.png">
+	<!--link for css file-->
+	<link rel="stylesheet" type="text/css" href="CSS/style.css">
+	<!--link for jquery files-->
+	<script type="text/javascript" src="jQuery/jquery.js"></script>
+	<script type="text/javascript" src="jQuery/custom.js"></script>
+</head>
+<body>
+  	<header>
+    	<div class="container">
+      		<figure class="logo">
+        		<img src="Resources/logo.jpg" width="430" height="100"><!--src attribute is used to give source-->
+      		</figure>
+
+      		<nav><!--includes navigations of the website-->
+        		<ul>
+                	<li><a href="../Website/index.html">Home</a></li><!--li tag is used for listing-->
+                 	<li><a href="../Website/about.html">About Us</a></li><!--href attribute with <a> tag is used to specify link adress-->
+       		        <li><a href="../Website/artist.html">Artist</a></li>
+               	    <li class="current"><a href="../Website/tattoo.html">Tattoo</a></li>
+                   	<li><a href="../Website/piercing.html">Piercing</a></li>
+                   	<li><a href="../Website/contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <style>
+        #get-tat{
+            text-transform: uppercase; 
+            font-size: 35px; 
+            font-family: Times New Roman;
+            text-align: center;
+            background-image: radial-gradient(circle, #e5f0e9, #c5cdc7,  #a6aba6, #888a87, #6a6b69);
+            padding: 50px;
+            word-spacing: 3px;
+        }
+
+        #slider{
+            height:420px;
+            width:100%;
+            margin: 20px auto;
+            position:relative;
+            border-radius:4px;
+            overflow:hidden;
+        }
+
+        #slider:hover{
+            cursor: pointer;
+        }
+
+        #image{
+            height:100%;
+            width:100%;
+            position:absolute;
+            }
+
+        .left_hold{
+	        height: 400px;
+	        width: 100px;
+	        position: absolute;
+	        top: 0px;
+	        left: 0px;
+        }
+        
+        .right_hold{
+          	height: 400px;
+          	width: 100px;
+         	position: absolute;
+          	top: 0px;
+          	right: 0px;
+        }
+
+        .left{
+	        height:50px;
+	        width:50px;
+	        position:absolute;
+	        top:40%;
+	        left:20px;
+	       	transition: all .2s ease-in-out 0s;
+          }
+
+        .right{
+            height:50px;
+            width:50px;
+            position:absolute;
+            top:40%;
+            right:20px;
+            transition: all .5s ease-in-out 0s;
+         }
+
+        .left_hold:hover .left{
+            -ms-transform:scale(1.1);
+            -webkit-transform:scale(1.1);
+            transform:scale(1.4);
+        }
+
+        .right_hold:hover .right{
+          	-ms-transform:scale(1.1);
+            -webkit-transform:scale(1.1);
+            transform:scale(1.4);
+        }
+
+        .canvas{
+        	margin-bottom: 10px;
+        	text-align: center;
+        }
+
+        .canvas img{
+        	margin-right: 20px;
+        }
+
+        #myCanvas{
+        	margin-left: 20px;
+        	padding-top: 10px;
+        }
+
+        .canvas button{
+        	margin-top: 10px;
+        	cursor: pointer;
+        }
+
+        .myClass{ 
+        	width: 100%; 
+            background-image: radial-gradient(circle, #e5f0e9, #c5cdc7, #a6aba6, #888a87, #6a6b69); 
+         }
+         .myClass1{
+         	background-color: red;
+
+         }
+         .btn-class{
+     		background-color: white;
+		    border: none;
+		    color: black;
+		    font-size: 20px;
+		    width: 250px;
+		    text-shadow: 2px 2px 8px #ff0000; 
+		    cursor: pointer;
+		    margin-bottom: 10px;
+		}
+
+    </style>
+
+    <h1 id="get-tat">get your dream tattoo at tattoos nepal</h1>
+    <div id="slider">
+   	    <img src="Resources/img1.jpg" id="image" >
+	    <div class="left_hold"><img onClick="photo(-1)" class="left" src="Resources/left.png"></div>
+	    <div class="right_hold"><img onClick="photo(1)" class="right" src="Resources/right.png"></div>
+	</div>
+
+    <script type="text/javascript">
+    	/*image slider function*/
+    	var imageCount = 1;
+  		var total = 5;//no of image
+
+  		function photo(x) {
+		    var image = document.getElementById('image');//DOM--geting element by id image
+		    imageCount = imageCount + x;
+
+		    if(imageCount > total){
+		    	imageCount = 1;
+		    }
+		    if(imageCount < 1){
+		    	imageCount = total;
+		    } 
+
+		    image.src = "Resources/img"+ imageCount +".jpg";
+		    clearInterval(time);                // clear interval stops the set interval.
+		    time =  window.setInterval(function photoA(){    
+		    var image = document.getElementById('image');
+		    imageCount = imageCount + 1;
+		    if(imageCount > total){
+		    	imageCount = 1;
+		    }
+		    if(imageCount < 1){
+		    	imageCount = total;
+		    } 
+		    image.src = "Resources/img"+ imageCount +".jpg";
+		    },2000);
+		}
+   
+  		var time = window.setInterval(function photoA(){   
+    		var image = document.getElementById('image');
+		    imageCount = imageCount + 1;
+		    if(imageCount > total){
+		    	imageCount = 1;
+		    }
+		    if(imageCount < 1){
+		    	imageCount = total;
+		    } 
+		    image.src = "Resources/img"+ imageCount +".jpg";
+		    },2000);
+
+  		//code for canvas...moving image into a canvas
+  		function myCanvas() {
+		    var c = document.getElementById("myCanvas");
+		    var ctx = c.getContext("2d");
+		    var img = document.getElementById("om");
+		    ctx.drawImage(img,15,0);
+		}
+
+ 	 </script>
+
+ 	 <!--canvas is used for graphics decoration-->
+ 	 <div class="canvas">
+ 	 	<img id="om" src="Resources/5.jpg" height="187" width="270">
+ 	 	<canvas id="myCanvas" height="210" width="300" style="border:2px solid #ED0000;">
+ 	 	</canvas>
+ 	 	<p><button onclick="myCanvas()">Move image</button></p>
+ 	 	<button id="btn-change" class="btn-class" >Change Background</button>
+   		<button id="btn-previous" class="btn-class">Remove Background</button>
+ 	 </div>
+
+ 	<footer class="footer">
+    <h1>Follow us</h1>
+
+      <div class="social-icon">
+          <a href="https://www.instagram.com/"><img src="Resources/insta.png"></a>
+          <a href="https://www.facebook.com/"><img src="Resources/fb.png"></a>
+      </div>
+
+      <p>&copy; 2019 TATTOOS NEPAL<br> All rights reserved.</p><!-- "&copy;" gives sign of copyright-->
+   </footer>
+  
+</body>
+</html>

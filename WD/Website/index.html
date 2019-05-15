@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--specification of character encoding for html document-->
+	<meta charset="utf-8">
+	<!--setting width to device-width for responsiveness-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Tattoos Nepal</title>
+	<!--link for icon-->
+	<link rel="icon" type="image/jpg" href="Resources/logo.png">
+	<!--link for css file-->
+	<link rel="stylesheet" type="text/css" href="CSS/style.css">
+
+	<!--link for jquery files-->
+	<script type="text/javascript" src="jQuery/jquery.js"></script>
+  	<script type="text/javascript" src="jQuery/custom.js"></script>
+</head>
+<body>
+	<header>
+		<div class="container">
+			<figure class="logo">
+				<img src="Resources/logo.jpg" width="430" height="100"><!--src attribute is used to give source-->
+			</figure>
+
+			<nav><!--includes navigations of the website-->
+				<ul>
+					<li class="current"><a href="index.html">Home</a></li><!--li tag is used for listing-->
+					<li><a href="../Website/about.html">About Us</a></li><!--href attribute with <a> tag is used to specify link adress-->
+					<li><a href="../Website/artist.html">Artist</a></li>
+					<li><a href="../Website/tattoo.html">Tattoo</a></li>
+					<li><a href="../Website/piercing.html">Piercing</a></li>
+					<li><a href="../Website/contact.html">Contact Us</a></li>
+				</ul>
+			</nav>
+
+		</div>
+	</header>
+
+	<div class="welcome">
+		<span class="text1">Welcome to</span><!-- span tag lets us to manipulate words differently-->
+		<span class="text2">TattoosNepal</span>
+	</div>
+
+	<div id="image">
+		<img src="Resources/i1.jpg" width="100%">
+		<h1 class="heading"><marquee>trust tattoosnepal with your body art</marquee></h1>
+	</div>
+
+	<div class="intro">
+		<p>Tattoos Nepal was founded and owned by a tattoo artist Ramesh Manang. Situated in the heart of Kathmandu, Thamel. Manang has assembled an amazing team of talented artists with years of experience which covers a wide range of tattoo styles. And recently, Tattoos Nepal has been providing piercing services as well.</p>
+	</div>
+
+	<div id="wrap" style="background-color: black; width: 100%; height: 250px; margin-bottom: 20px;"> <!--inline css; css in the same line of html-->
+		<div class="leftdiv">
+			<img id="img1" src="Resources/img2.jpg" height="196.5px" width="350px">
+			<img src="Resources/fail.jpg" height="196.5px" width="350px">
+		</div>
+
+		<aside><!--content inside aside tag is also the content of container but remains aside of the container-->
+			<h1 style="color: #FFFFFF; text-align: center;">"Think before you ink"</h1>	
+		</aside>
+	</div>
+
+	<style> /*internal css*/
+		.welcome{ /*. selects class*/
+			margin-bottom: 4px;
+			background-color: black;
+			text-align: center;
+			padding-top: 50px;
+			padding-bottom: 50px;
+			font-family: sans-serif;
+			width: 100%;
+		}
+
+		.welcome span{
+			text-transform: uppercase;
+			display: block;
+		}
+
+		.text1{
+			color: white;
+			font-size: 60px;
+			font-weight: 700;
+			letter-spacing: 8px;
+			margin-bottom: 20px;
+			background: black;
+			position: relative;
+			animation: text 3s 1;
+		}
+
+		.text2{
+			font-size: 40px;
+			font-weight: 500;
+			letter-spacing: 4px;
+			color: #ED0000;
+		}
+
+		@keyframes text {/*used for animations; changing one form of css to another*/
+			0%{
+				color: black;
+				margin-bottom: -40px;
+			}
+			30%{
+				letter-spacing: 20px;
+				margin-bottom: -40px;
+			}
+			85%{
+				letter-spacing: 8px;
+				margin-bottom: -40px;
+			}
+		}
+
+		.intro p{
+			color: black;   
+			text-align: center; 
+			font-size: 20px;
+			font-family: sans-serif;
+			padding: 60px 200px;
+			margin-bottom: 4px; 
+			background-image: radial-gradient(circle, #e5f0e9, #c5cdc7, #a6aba6, #888a87, #6a6b69);
+		}
+
+		#image{ /* # selects id*/
+			position: relative; 
+			width: 100%;
+			margin: 0 auto;
+		}
+
+		.heading{
+			color: #FFFFFF; 
+			text-transform: uppercase;
+			text-align: center; 
+			font-size: 50px; 
+			font-family: Times New Roman;
+			position: absolute; 
+			top: 50%; 
+			width: 100%; 
+			word-spacing: 10px;
+		}
+
+		.leftdiv{
+			float: left;
+		}
+
+		.leftdiv img{
+			padding: 26.5px;
+			opacity: 0.8;
+		}
+
+		aside{
+			font-size: 25px;
+			padding-top: 95px;
+		}
+
+		/*css property changes when width is 950 and lesser*/
+		@media only screen and (max-width: 950px){
+			.intro p{
+				text-align: center; 
+				padding: 50px; 
+				margin-bottom: 4px; 
+			}
+
+			.leftdiv #img1{
+				display: none;
+			}
+		}
+
+	</style>
+
+	<footer class="footer">
+ 		<h1>Follow us</h1>
+
+	    <div class="social-icon">
+	       	<a href="https://www.instagram.com/"><img src="Resources/insta.png"></a>
+	       	<a href="https://www.facebook.com/"><img src="Resources/fb.png"></a>
+	    </div>
+
+	    <p>&copy; 2019 TATTOOS NEPAL<br> All rights reserved.</p><!-- "&copy;" gives sign of copyright-->
+   </footer>
+	
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--specification of character encoding for html document-->
+	<meta charset="utf-8">
+	<!--setting width to device-width for responsiveness-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>About Us-Tattoos Nepal</title>
+	<!--link for icon-->
+	<link rel="icon" type="image/jpg" href="Resources/logo.png">
+	<!--link for css file-->
+	<link rel="stylesheet" type="text/css" href="CSS/style.css">
+	<!--link for jquery files-->
+	<script type="text/javascript" src="jQuery/jquery.js"></script>
+  	<script type="text/javascript" src="jQuery/custom.js"></script>
+</head>
+<body>
+	<header>
+		<div class="container">
+			<figure class="logo">
+				<img src="Resources/logo.jpg" width="430" height="100"><!--src attribute is used to give source-->
+			</figure>
+
+			<nav><!--includes navigations of the website-->
+				<ul>
+					<li><a href="index.html">Home</a></li><!--li tag is used for listing-->
+					<li class="current"><a href="../about.html">About Us</a></li><!--href attribute with <a> tag is used to specify link adress-->
+					<li><a href="artist.html">Artist</a></li>
+					<li><a href="tattoo.html">Tattoo</a></li>
+					<li><a href="piercing.html">Piercing</a></li>
+					<li><a href="contact.html">Contact Us</a></li>
+				</ul>
+			</nav>
+
+		</div>
+	</header>
+
+	<style>
+		.time-info{
+			padding: 50px;
+			margin-top: 4px;
+			background-color: #000000;
+
+		}
+
+		.time{
+			padding: 10px;
+			color: #FFFFFF;
+			text-align: center;
+		}
+
+		.time h1{
+			text-transform: uppercase;
+			font-family: Times New Roman;
+			font-size: 30px;
+			text-shadow: 2px 2px 8px #ff0000;
+		}
+
+		.time h2{
+			font-family: Times New Roman;
+			padding-top: 50px;
+		}
+
+		.time p{
+			padding-top: 15px;
+		}
+
+		.about-us{
+			background-color: #FFFFFF;
+			padding-top: 10px;
+			padding-bottom: 60px;
+			padding-left: 250px;
+			padding-right: 250px; 
+			text-align: center;
+			font-family: sans-serif;
+			font-size: 20px;
+		}
+
+		#about h1{
+			padding-bottom: 9px;
+			color: rgba(225,225,225,.1);
+			font-size: 55px;
+			text-align: center;
+			background-image: url(../Resources/color.jpg);
+			background-repeat: repeat-x;
+			-webkit-background-clip: text;
+			animation: animate 15s linear infinite;
+		}
+
+		@keyframes animate{
+			0%{
+				background-position: left 0px top -15px;
+			}
+			40%{
+				background-position: left 800px top -15px;
+			}
+		}
+
+		.works{
+			text-align: center;
+			padding-top: 50px;
+		}
+
+		.works span{
+			text-transform: uppercase;
+			text-decoration: underline;
+			font-size: 45px;
+			font-family: Times New Roman;
+			font-weight: 700;
+			word-spacing: 10px;
+		}
+
+		#works-img{
+			padding-top: 40px;
+		}
+
+		#works-img img{
+			height: 200px;
+			width: 200px;
+			padding: 15px;
+			float: center;
+			filter: grayscale(100%);
+		}
+
+		#works-img img:hover{
+			filter: grayscale(0);
+			transform: scale(1.1);
+		}
+
+
+		@media only screen and (max-width: 950px){
+			.about-us{
+				padding-left: 50px;
+				padding-right: 50px;
+			}
+		}
+
+	</style>
+
+	<div id="about">
+		<h1>About Tattoos Nepal</h1>
+	</div>
+
+	<div class="about-us">
+		<p>Established in 2014 A.D. in heart of our capital, Thamel, Tattoos Nepal has been providing tattooing and piercing services. Tattoos Nepal exceeds tattoo industry standards in quality and hygiene. We use almost advanced medical field sterilization techniques.</p><br>
+		<p>We specialize in creating custom pieces. but, if you prefer, we have thousands of designs for you to choose from. We also offer tattoo re design and cover ups and piercings as well.</p><br>
+		<p>Tattoos Nepal heartly welcomes you to our studio to get your dream tattoo and have an amazing experience.</p>
+	</div>
+
+	<div class="time-info">
+		<section class="time">
+			<h1>Opening hours</h1>
+			<h2>Come Visit</h2>
+			<p style="padding-top: 50px;">Mon-Fri: 9am-6pm</p>
+			<p>Sat: 10am-2pm</p>
+			<p>Sun: Closed</p>
+		</section>
+	</div>
+
+	<div class="works">
+		<span>Our latest work</span>
+
+		<div id="works-img">
+			<a href="Resources/1.jpg"><img src="Resources/1.jpg"></a>
+			<a href="Resources/2.jpg"><img src="Resources/2.jpg"></a>
+			<a href="Resources/3.jpg"><img src="Resources/3.jpg"></a>
+			<a href="Resources/4.jpg"><img src="Resources/4.jpg"></a>
+			<a href="Resources/5.jpg"><img src="Resources/5.jpg"></a>
+			<a href="Resources/6.jpg"><img src="Resources/6.jpg"></a>
+			<a href="Resources/7.jpg"><img src="Resources/7.jpg"></a>
+			<a href="Resources/8.jpg"><img src="Resources/8.jpg"></a>
+			<a href="Resources/9.jpg"><img src="Resources/9.jpg"></a>
+			<a href="Resources/10.jpg"><img src="Resources/10.jpg"></a>
+			<a href="Resources/11.jpg"><img src="Resources/11.jpg"></a>
+			<a href="Resources/12.jpg"><img src="Resources/12.jpg"></a>
+		</div>
+
+	</div>
+
+	<footer class="footer">
+ 		<h1>Follow us</h1>
+
+	    <div class="social-icon">
+	       	<a href="https://www.instagram.com/"><img src="Resources/insta.png"></a>
+	       	<a href="https://www.facebook.com/"><img src="Resources/fb.png"></a>
+	    </div>
+
+	    <p>&copy; 2019 TATTOOS NEPAL<br> All rights reserved.</p><!-- "&copy;" gives sign of copyright-->
+   </footer>
+	
+</body>
+</html>

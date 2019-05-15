@@ -1,0 +1,27 @@
+body{
+	background-color: gray;
+}
+h1,h2{
+	font-family:Sonsie One;
+	text-align: center;
+}
+nav ul li{
+	display: inline;
+
+}
+nav{
+	background-color: purple;
+}
+form{
+	float:right;
+}
+h3{
+	font-family:Sonsie One;
+}
+article{
+	float:left;
+}
+aside{
+	float:right;
+	background-color: purple;
+}

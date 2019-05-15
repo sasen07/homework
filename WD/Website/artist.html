@@ -1,0 +1,270 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<!--specification of character encoding for html document-->
+    <meta charset="utf-8">
+    <!--setting width to device-width for responsiveness-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Artists-Tattoos Nepal</title>
+    <!--link for icon-->
+    <link rel="icon" type="image/jpg" href="Resources/logo.png">
+    <!--link for css file-->
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <!--link for jquery files-->
+    <script type="text/javascript" src="jQuery/jquery.js"></script>
+    <script type="text/javascript" src="jQuery/custom.js"></script>
+</head>
+<body onload="clickImg()"><!--runs cliclImg method when this page loads-->
+    <header>
+        <div class="container">
+            <figure class="logo">
+                <img src="Resources/logo.jpg" width="430" height="100"><!--src attribute is used to give source-->
+            </figure>
+
+            <nav><!--includes navigations of the website-->
+                <ul>
+                    <li><a href="../Website/index.html">Home</a></li><!--li tag is used for listing-->
+                    <li><a href="../Website/about.html">About Us</a></li><!--href attribute with <a> tag is used to specify link adress-->
+                    <li class="current"><a href="../Website/artist.html">Artist</a></li>
+                    <li><a href="../Website/tattoo.html">Tattoo</a></li>
+                    <li><a href="../Website/piercing.html">Piercing</a></li>
+                    <li><a href="../Website/contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <p id="clickImg">Click on the image below for details</p>
+
+    <script type="text/javascript">
+        $("#clickImg").hide();//hiding id cliclImg
+        function clickImg(){
+            alert($("#clickImg").text());//showing text of id cliclImg via alert
+        }
+    </script>
+
+	<style>/*internal css for some elements of this html page*/
+		#artist-img{
+    	width: 100%;	
+        }
+
+        #artist-img td{
+        	border-style: double;
+        	border-width: thick;
+            border-collapse: collapse;
+        }
+
+        #artist-img td{
+        	font-family: Times New Roman;
+        	padding:10px;
+        	background-image: radial-gradient(circle, #e5f0e9, #c5cdc7,  #a6aba6, #888a87, #6a6b69);
+        }
+
+        #artist-img img{
+        	width: 260px;
+        	height: auto;
+        }
+
+        .artist {
+        	position:relative;
+        	width: 260px;
+        	height: auto; 
+        	cursor: pointer;
+        }
+
+        .artist:hover .artist-name{
+        	width: 260px;
+        }
+        
+        .artist img{
+        	width: 160px;
+        	height: auto;
+        }
+        
+        .artist-name{
+        	width: 0px;
+        	height: auto;
+        	position: absolute;
+        	background: rgba(243,16,16,0.74);
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            transition: 0.7s ease;
+        }
+
+        .artist-name h2{
+        	color: white;
+        	font-size: 22px;
+        	border: none;
+        	padding:8px 12px; 
+        }
+
+        .table{
+            width: 100%;
+            height: auto;
+        }
+
+        table{
+            float: center;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .artist-detail{
+            margin-top: 4px;
+            background-color: black;
+            color: white;
+            padding: 30px;
+            padding-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        .artist-detail h1{
+            padding-bottom: 20px;
+            font-size: 35px;
+
+        }
+
+        .artist-detail p{
+            width: 50%;
+            text-align: left;
+            float: left;
+            font-family: sans-serif;
+            font-size:20px;
+            line-height: 25px;
+            padding-right: 100px;
+        }
+
+        .research {
+            margin-top: 4px;
+            margin-bottom: 10px;
+            width: 100%;
+            height: 150px;
+            background-color: #000000; 
+        }
+
+        .research h1{
+            color: #FFFFFF;
+            position: relative;
+            top: 50px;
+            text-align: center;  
+        }
+
+        @media only screen and (max-width: 950px){
+
+        }
+
+	</style>
+
+    <div class="table">
+	<table id="artist-img" align="center">
+      	<tr>
+      		<td colspan="5" style="text-align: center; font-family: Times New Roman; background-image: radial-gradient(circle, #e5f0e9, #c5cdc7,  #a6aba6, #888a87, #6a6b69); width: 100%;">
+                <h1>The Tattoos Nepal Artists</h1>
+                
+            </td>
+      	</tr>
+
+        <!--putting up images in the table-->
+      	<tr>
+            <td>
+                <div class="artist" id="a1">
+                    <img src="Resources/artist1.jpg">
+                    <div class="artist-name">
+                        <h2>Ramesh Manang</h2>
+                    </div>
+                </div>
+            </td>
+
+      		<td>
+                <div class="artist" id="a2">
+                    <img src="Resources/artist2.jpg">
+                    <div class="artist-name">
+                        <h2>Suzal Tandukar</h2>
+                    </div>
+                </div>
+            </td>
+
+      		<td>
+                <div class="artist" id="a3">
+                    <img src="Resources/artist3.jpg">
+                    <div class="artist-name">
+                        <h2>Lisa Thapa</h2>
+                    </div>
+                </div>
+            </td>
+
+      		<td>
+                <div class="artist" id="a4">
+                    <img src="Resources/artist4.jpg">
+                    <div class="artist-name">
+                        <h2>Bidur Dhakal</h2>
+                    </div>
+                </div>
+            </td>
+
+      		<td>
+                <div class="artist" id="a5">
+                    <img src="Resources/artist5.jpg">
+                    <div class="artist-name">
+                        <h2>Manoj K.C.</h2>
+                    </div>
+                </div>
+            </td>
+        </tr>
+      	
+    </table>
+    </div>
+
+    <article class="artist-detail" id="artist1">
+        <h1>Ramesh Manang</h1>
+        <p>Ramesh has been tattooing since 2000. Throughout his career he has worked in various tattoo studios, won awards at tattoo conventions and worked guest spots alongside some of the best tattoo artists in the world, learning from the best and perfecting his technique along the way. With a killer combination of many years of experience and an excellent understanding of colour theory. In 2014 he decided it was time to start his own tattoo studio and opened Tattoos Nepal.</p>
+        <img src="Resources/artist1.jpg" height="200px" width="250px">
+    </article>
+
+    <article class="artist-detail" id="artist2">
+        <h1>Suzal Tandukar</h1>
+        <p>Suzal is an all round artist. He has been tattooing since 2002, and has an eye for the finer details, this really shows in his black and grey wildlife portraits, which he specialises in. Suzal also enjoys geometric, dot-work and blackwork styles which he draws directly onto the skin to give them a unique flow.</p>
+        <img src="../Resources/artist2.jpg" height="200px" width="250px">
+    </article>
+
+    <article class="artist-detail" id="artist3">
+        <h1>Lisa Thapa</h1>
+        <p>After finishing her degree in illustration it wasn’t long before Lisa started her career as a tattoo artist back in 2011, with such an intriguing, unique style of work that has not gone unnoticed, Lisa has been featured in several tattoo magazines and blogs all over the world.</br>
+        She finds her inspiration from the more traditional style of tattooing with an illustrative twist, using the contrast of bold line work with a bright colour pallet, Lisa can transform almost any everyday object into a fun, desirable piece of artwork.</p>
+        <img src="../Resources/artist3.jpg" height="200px" width="250px">
+    </article>
+
+    <article class="artist-detail" id="artist4">
+        <h1>Bidur Dhakal</h1>
+        <p>Bidur has been tattooing since 2010 specialising in all forms of black work, geometry, Polynesian, Thai, Borneo/Dayak and Marquesan. Bidur is a multi award winning artist with a love of large scale work so he can fully express his innovative ideas. He has completed and is currently working on a number of exceptional body suits however is more than happy to take on smaller work too.</p>
+        <img src="../Resources/artist4.jpg" height="200px" width="250px">
+    </article>
+
+    <article class="artist-detail" id="artist5">
+        <h1>Manoj K.C.</h1>
+        <p>Manoj has tattooing experience of 8 years. He does almost all forms but he loves color tattoos and portraits to give to the clients. Manoj also enjoys black and grey, and, dot-work designs.</p>
+        <img src="Resources/artist5.jpg" height="200px" width="250px">
+    </article>
+
+    <div class="research">
+        <h1>"Research on artists before getting tatted"</h1>
+    </div>
+
+    <footer class="footer">
+        <h1>Follow us</h1>
+
+        <div class="social-icon">
+            <a href="https://www.instagram.com/"><img src="Resources/insta.png"></a>
+            <a href="https://www.facebook.com/"><img src="Resources/fb.png"></a>
+        </div>
+
+        <p>&copy; 2019 TATTOOS NEPAL<br> All rights reserved.</p><!-- "&copy;" gives sign of copyright-->
+   </footer>
+    
+</body>
+</html>
